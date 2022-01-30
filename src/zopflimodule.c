@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 #ifdef SYSTEM_ZOPFLI
-#define ZOPFLI_H <zopfli.h>
+#define ZOPFLI_H <zopfli/zopfli.h>
 #else
 #define ZOPFLI_H "../zopfli/src/zopfli/zopfli.h"
 #endif
