@@ -29,8 +29,10 @@ class custom_build_ext(build_ext):
 with open("README.rst", "r", encoding="utf-8") as readme:
     long_description = readme.read()
 
-prefer_system_zopfli = bool(os.environ.get('USE_SYSTEM_ZOPFLI'))
+# prefer_system_zopfli = bool(os.environ.get('USE_SYSTEM_ZOPFLI'))
+prefer_system_zopfli = True
 if prefer_system_zopfli:
+    print("apt-get install libzopfli-dev")
     zopfli_ext_kwargs = {
         'sources': [
             'src/zopflimodule.c',
